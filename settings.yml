@@ -1,0 +1,74 @@
+auto_apply_all_tables:
+  default: true
+  type: bool
+  description:
+    zh_CN: "自动应用于帖子正文中的所有现有 Markdown/HTML 表格。关闭后，仅处理使用 data-theme-doc-table 包裹的表格。"
+    en: "Automatically enhance all existing Markdown/HTML tables in cooked post content."
+
+default_horizontal_align:
+  default: center
+  type: enum
+  choices:
+    - left
+    - center
+    - right
+  description:
+    zh_CN: "默认水平对齐方式。"
+    en: "Default horizontal alignment."
+
+default_vertical_align:
+  default: middle
+  type: enum
+  choices:
+    - top
+    - middle
+    - bottom
+  description:
+    zh_CN: "默认垂直对齐方式。"
+    en: "Default vertical alignment."
+
+default_row_height:
+  default: 44
+  type: integer
+  min: 24
+  max: 160
+  description:
+    zh_CN: "默认最小行高（像素）。内容较多时仍会自动撑高。"
+    en: "Default minimum row height in pixels."
+
+default_min_column_width:
+  default: 120
+  type: integer
+  min: 60
+  max: 500
+  description:
+    zh_CN: "没有单独指定列宽时，每列的默认最小宽度（像素）。"
+    en: "Default minimum column width in pixels."
+
+sticky_header:
+  default: true
+  type: bool
+  description:
+    zh_CN: "滚动表格时固定表头。"
+    en: "Keep the table header sticky while scrolling."
+
+sticky_first_column:
+  default: false
+  type: bool
+  description:
+    zh_CN: "默认固定第一列。"
+    en: "Keep the first column sticky by default."
+
+zebra_rows:
+  default: true
+  type: bool
+  description:
+    zh_CN: "启用隔行底色。"
+    en: "Enable zebra striping."
+
+hover_highlight:
+  default: true
+  type: bool
+  description:
+    zh_CN: "鼠标经过时高亮整行。"
+    en: "Highlight rows on hover."

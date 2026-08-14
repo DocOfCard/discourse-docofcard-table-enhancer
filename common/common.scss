@@ -1,0 +1,190 @@
+// DocOfCard Table Enhancer v1.0.6
+// Tables use their content width by default. Per-table CSS variables can override it.
+
+.cooked .doc-table-scroll {
+  position: relative;
+  display: block;
+  width: var(--doc-table-container-width, fit-content);
+  max-width: var(--doc-table-container-max-width, 100%);
+  margin: var(--doc-table-container-margin, 1em auto);
+  overflow-x: auto;
+  overflow-y: visible;
+  overscroll-behavior-inline: contain;
+  border: var(--doc-table-outer-border-width, 1px) solid
+    var(--doc-table-outer-border-color, var(--primary)) !important;
+  border-radius: var(--doc-table-outer-border-radius, var(--d-border-radius, 8px));
+  background: var(--secondary);
+  box-sizing: border-box;
+}
+
+.cooked .fullscreen-table-wrapper.doc-table-scroll {
+  padding: 0 !important;
+}
+
+.cooked .fullscreen-table-wrapper.doc-table-scroll
+  > .fullscreen-table-wrapper__buttons {
+  z-index: 8;
+}
+
+.cooked .doc-table-scroll > table.doc-table,
+.cooked .md-table .doc-table-scroll > table.doc-table {
+  width: var(--doc-table-width, max-content) !important;
+  min-width: var(--doc-table-min-width, 0) !important;
+  max-width: none !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  table-layout: auto !important;
+  background: var(--secondary);
+}
+
+.cooked .doc-table-scroll > table.doc-table th,
+.cooked .doc-table-scroll > table.doc-table td {
+  min-width: var(--doc-table-min-column-width, 120px);
+  height: var(--doc-table-row-height, 44px);
+  padding: 0.65em 0.85em !important;
+  box-sizing: border-box;
+  text-align: var(--doc-table-horizontal-align, center) !important;
+  vertical-align: var(--doc-table-vertical-align, middle) !important;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: var(--doc-table-cell-border-width, 1px) solid
+    var(--doc-table-cell-border-color, var(--primary-low)) !important;
+  border-bottom: var(--doc-table-cell-border-width, 1px) solid
+    var(--doc-table-cell-border-color, var(--primary-low)) !important;
+  background-color: var(--secondary) !important;
+  transition: background-color 120ms ease;
+}
+
+.cooked .doc-table-scroll > table.doc-table th:last-child,
+.cooked .doc-table-scroll > table.doc-table td:last-child {
+  border-right: 0 !important;
+}
+
+.cooked .doc-table-scroll > table.doc-table tbody tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+.cooked .doc-table-scroll > table.doc-table thead th {
+  font-weight: 700;
+  background-color: var(--primary-low) !important;
+}
+
+.cooked .doc-table-scroll > table.doc-table.doc-table--zebra tbody tr:nth-child(even) > td {
+  background-color: var(--primary-very-low) !important;
+}
+
+.cooked .doc-table-scroll > table.doc-table.doc-table--hover tbody tr:hover > td {
+  background-color: var(--tertiary-low) !important;
+}
+
+.cooked .doc-table-scroll > table.doc-table.doc-table--sticky-header thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.cooked .doc-table-scroll > table.doc-table.doc-table--sticky-first-column tr > :first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  box-shadow: 1px 0 0 var(--primary-low);
+}
+
+.cooked .doc-table-scroll > table.doc-table.doc-table--sticky-first-column thead > tr > :first-child {
+  z-index: 6;
+  background-color: var(--primary-low) !important;
+}
+
+.cooked .doc-table-scroll > table.doc-table.doc-table--sticky-first-column.doc-table--zebra tbody tr:nth-child(even) > :first-child {
+  background-color: var(--primary-very-low) !important;
+}
+
+.cooked .doc-table-scroll > table.doc-table.doc-table--sticky-first-column.doc-table--hover tbody tr:hover > :first-child {
+  background-color: var(--tertiary-low) !important;
+}
+
+// Composer table settings dialog
+.doc-table-settings-dialog {
+  width: min(680px, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  padding: 0;
+  border: 1px solid var(--primary-low);
+  border-radius: 10px;
+  background: var(--secondary);
+  color: var(--primary);
+  box-shadow: var(--shadow-modal);
+
+  &::backdrop {
+    background: rgb(0 0 0 / 45%);
+  }
+}
+
+.doc-table-settings-form {
+  header,
+  footer {
+    padding: 1rem 1.25rem;
+  }
+
+  header {
+    border-bottom: 1px solid var(--primary-low);
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    border-top: 1px solid var(--primary-low);
+  }
+}
+
+.doc-table-settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 1rem;
+  padding: 1.25rem;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-weight: 600;
+  }
+
+  .wide {
+    grid-column: 1 / -1;
+  }
+
+  input,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.doc-table-settings-checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+  padding: 0 1.25rem 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .doc-table-settings-grid,
+  .doc-table-settings-checks {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-table-settings-grid .wide {
+    grid-column: auto;
+  }
+}

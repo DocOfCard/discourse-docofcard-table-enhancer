@@ -1,0 +1,5 @@
+zh_CN:
+  table_settings:
+    title: "表格设置"
+  theme_metadata:
+    description: "自动增强 Discourse 表格，并在 Markdown 编辑器工具栏提供每张表独立设置。"

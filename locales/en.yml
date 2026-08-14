@@ -1,0 +1,5 @@
+en:
+  table_settings:
+    title: "Table settings"
+  theme_metadata:
+    description: "Enhances Discourse tables and adds per-table settings to the Markdown composer toolbar."
