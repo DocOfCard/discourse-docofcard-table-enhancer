@@ -1,4 +1,4 @@
-# DocOfCard Table Enhancer 2.0.3
+# DocOfCard Table Enhancer 2.0.5
 
 基于 1.0.6 重做，保留原有表格增强功能，并加入无需轮询或 MutationObserver 的 Markdown 编辑器工具栏入口。
 
@@ -17,6 +17,20 @@
 - 仅处理 Markdown 表格。
 - 需要先把光标放在表格中；正文只有一张表时也会自动识别。
 - 默认表格按内容宽度显示并居中。
+
+
+## v2.0.5
+
+- 覆盖 Discourse Core 对 `fullscreen-table-wrapper` 自带的 Hover 外围阴影和阴影过渡。
+- 仅作用于已由本组件增强的 `.fullscreen-table-wrapper.doc-table-scroll`，不影响其他 Discourse 表格。
+- 保留 v2.0.4 的隔行底色和鼠标悬停整行高亮。
+
+
+## v2.0.4
+
+- 恢复默认隔行底色，让相邻行保持轻微明暗差异，提升横向阅读辨识度。
+- 恢复默认 Hover 整行高亮，鼠标移动到表格行时会有明显但克制的背景变化。
+- 保留 v2.0.3 的浅灰表头、细边框、轻量圆角和左对齐整体风格。
 
 
 ## v2.0.3

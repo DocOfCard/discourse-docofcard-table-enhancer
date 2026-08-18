@@ -1,4 +1,4 @@
-// DocOfCard Table Enhancer v2.0.3
+// DocOfCard Table Enhancer v2.0.5
 // Tables use their content width by default. Per-table CSS variables can override it.
 
 .cooked .doc-table-scroll {
@@ -19,6 +19,12 @@
 
 .cooked .fullscreen-table-wrapper.doc-table-scroll {
   padding: 0 !important;
+  box-shadow: none !important;
+  transition: none !important;
+}
+
+html.discourse-no-touch .cooked .fullscreen-table-wrapper.doc-table-scroll:hover {
+  box-shadow: none !important;
 }
 
 .cooked .fullscreen-table-wrapper.doc-table-scroll
