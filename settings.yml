@@ -6,7 +6,7 @@ auto_apply_all_tables:
     en: "Automatically enhance all existing Markdown/HTML tables in cooked post content."
 
 default_horizontal_align:
-  default: center
+  default: left
   type: enum
   choices:
     - left
@@ -28,7 +28,7 @@ default_vertical_align:
     en: "Default vertical alignment."
 
 default_row_height:
-  default: 44
+  default: 42
   type: integer
   min: 24
   max: 160
@@ -60,14 +60,14 @@ sticky_first_column:
     en: "Keep the first column sticky by default."
 
 zebra_rows:
-  default: true
+  default: false
   type: bool
   description:
     zh_CN: "启用隔行底色。"
     en: "Enable zebra striping."
 
 hover_highlight:
-  default: true
+  default: false
   type: bool
   description:
     zh_CN: "鼠标经过时高亮整行。"

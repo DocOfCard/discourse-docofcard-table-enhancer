@@ -1,4 +1,4 @@
-// DocOfCard Table Enhancer v1.0.6
+// DocOfCard Table Enhancer v2.0.3
 // Tables use their content width by default. Per-table CSS variables can override it.
 
 .cooked .doc-table-scroll {
@@ -11,7 +11,7 @@
   overflow-y: visible;
   overscroll-behavior-inline: contain;
   border: var(--doc-table-outer-border-width, 1px) solid
-    var(--doc-table-outer-border-color, var(--primary)) !important;
+    var(--doc-table-outer-border-color, var(--primary-low)) !important;
   border-radius: var(--doc-table-outer-border-radius, var(--d-border-radius, 8px));
   background: var(--secondary);
   box-sizing: border-box;
@@ -43,10 +43,10 @@
 .cooked .doc-table-scroll > table.doc-table th,
 .cooked .doc-table-scroll > table.doc-table td {
   min-width: var(--doc-table-min-column-width, 120px);
-  height: var(--doc-table-row-height, 44px);
-  padding: 0.65em 0.85em !important;
+  height: var(--doc-table-row-height, 42px);
+  padding: 0.68em 0.9em !important;
   box-sizing: border-box;
-  text-align: var(--doc-table-horizontal-align, center) !important;
+  text-align: var(--doc-table-horizontal-align, left) !important;
   vertical-align: var(--doc-table-vertical-align, middle) !important;
   white-space: normal;
   word-break: keep-all;
@@ -58,7 +58,6 @@
   border-bottom: var(--doc-table-cell-border-width, 1px) solid
     var(--doc-table-cell-border-color, var(--primary-low)) !important;
   background-color: var(--secondary) !important;
-  transition: background-color 120ms ease;
 }
 
 .cooked .doc-table-scroll > table.doc-table th:last-child,
@@ -71,8 +70,9 @@
 }
 
 .cooked .doc-table-scroll > table.doc-table thead th {
-  font-weight: 700;
-  background-color: var(--primary-low) !important;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: var(--primary-very-low) !important;
 }
 
 .cooked .doc-table-scroll > table.doc-table.doc-table--zebra tbody tr:nth-child(even) > td {
@@ -80,7 +80,7 @@
 }
 
 .cooked .doc-table-scroll > table.doc-table.doc-table--hover tbody tr:hover > td {
-  background-color: var(--tertiary-low) !important;
+  background-color: var(--primary-low) !important;
 }
 
 .cooked .doc-table-scroll > table.doc-table.doc-table--sticky-header thead th {
@@ -98,7 +98,7 @@
 
 .cooked .doc-table-scroll > table.doc-table.doc-table--sticky-first-column thead > tr > :first-child {
   z-index: 6;
-  background-color: var(--primary-low) !important;
+  background-color: var(--primary-very-low) !important;
 }
 
 .cooked .doc-table-scroll > table.doc-table.doc-table--sticky-first-column.doc-table--zebra tbody tr:nth-child(even) > :first-child {
@@ -106,7 +106,7 @@
 }
 
 .cooked .doc-table-scroll > table.doc-table.doc-table--sticky-first-column.doc-table--hover tbody tr:hover > :first-child {
-  background-color: var(--tertiary-low) !important;
+  background-color: var(--primary-low) !important;
 }
 
 // Composer table settings dialog
