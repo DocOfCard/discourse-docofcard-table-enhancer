@@ -5,7 +5,7 @@
   "component": true,
   "authors": "DocOfCard",
   "minimum_discourse_version": "3.5.0.beta1",
-  "version": "2.0.5",
-  "theme_version": "2.0.5",
+  "version": "2.0.6",
+  "theme_version": "2.0.6",
   "description": "Enhances Discourse tables and adds a toolbar-based per-table settings editor without DOM polling. Uses the Discourse toolbar event API directly so the table settings button works in Discourse v2026.8."
 }

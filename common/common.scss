@@ -1,4 +1,4 @@
-// DocOfCard Table Enhancer v2.0.5
+// DocOfCard Table Enhancer v2.0.6
 // Tables use their content width by default. Per-table CSS variables can override it.
 
 .cooked .doc-table-scroll {
@@ -87,6 +87,8 @@ html.discourse-no-touch .cooked .fullscreen-table-wrapper.doc-table-scroll:hover
 
 .cooked .doc-table-scroll > table.doc-table.doc-table--hover tbody tr:hover > td {
   background-color: var(--primary-low) !important;
+  border-right-color: var(--primary-low-mid) !important;
+  border-bottom-color: var(--primary-low-mid) !important;
 }
 
 .cooked .doc-table-scroll > table.doc-table.doc-table--sticky-header thead th {
@@ -113,6 +115,7 @@ html.discourse-no-touch .cooked .fullscreen-table-wrapper.doc-table-scroll:hover
 
 .cooked .doc-table-scroll > table.doc-table.doc-table--sticky-first-column.doc-table--hover tbody tr:hover > :first-child {
   background-color: var(--primary-low) !important;
+  box-shadow: 1px 0 0 var(--primary-low-mid);
 }
 
 // Composer table settings dialog
